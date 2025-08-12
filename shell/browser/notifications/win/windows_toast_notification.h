@@ -58,11 +58,12 @@ class WindowsToastNotification : public Notification {
   friend class ToastEventHandler;
 
   HRESULT ShowInternal(const NotificationOptions& options);
-  std::u16string GetToastXml(const std::u16string& title,
-                             const std::u16string& msg,
-                             const std::wstring& icon_path,
-                             const std::u16string& timeout_type,
-                             const bool silent);
+  std::u16string GetToastXml(
+      const std::u16string& title,
+      const std::u16string& msg,
+      const std::wstring& icon_path,
+      const std::u16string& timeout_type,
+      const bool silent);
   HRESULT XmlDocumentFromString(
       const wchar_t* xmlString,
       ABI::Windows::Data::Xml::Dom::IXmlDocument** doc);
